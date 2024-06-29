@@ -23,7 +23,8 @@ for i in range(2, 8):  # i = 2, 3, 4, 5, 6, 7
     print(f"hello world {i}")
 
 
-# We are using string
+
+# We are using string as iterable
 
 for letter in "hello world":
     print(letter)
@@ -31,3 +32,11 @@ for letter in "hello world":
 message = "good"
 for letter in message:
     print(letter)
+
+
+
+# We are using list as iterable
+friends = ["john", "jane", "doe"]
+
+for name in friends:
+    print(name)
