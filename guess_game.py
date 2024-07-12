@@ -5,6 +5,10 @@ computer will have a correct number. It will ask a player to put a number.
 If the number matches, then the game is over and the player wins.
 if the number does not match, computer will ask the player to put another number.
 
+
+TODO:
+the user only has 3 chances to guess the correct number.
+if the user does not guess the correct number in 3 chances, then the game is over.
 """
 import random
 
