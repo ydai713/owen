@@ -13,17 +13,37 @@ if the user does not guess the correct number in 3 chances, then the game is ove
 import random
 
 
-print("##########################################")
-print("           Welcome to the game")
-print("##########################################")
+def main():
 
-correct_number = random.randint(1, 10)
-player_number = input("Put a number: ")
-player_number = int(player_number)
+    # print the game title
+    print_game_title()
+    
+    # generate a random correct number
+    correct_number = generate_random_number()
+    
+    # ask player to put a number
+    player_number = receive_user_input()
+    
+    while correct_number != player_number:
+        print('Sorry, try again')
+        player_number = receive_user_input()
+    
+    print('Congratulation, you win the game')
 
-while correct_number != player_number:
-    print('Sorry, try again')
-    player_number = input('retry: ')
+
+def receive_user_input():
+    player_number = input("Put a number: ")
     player_number = int(player_number)
+    return 
 
-print('Congratulation, you win the game')
+def generate_random_number():
+    return random.randint(1, 10)
+
+def print_game_title():
+    print("##########################################")
+    print("           Welcome to the game")
+    print("##########################################")
+
+
+if __name__ == "__main__":
+    main()
